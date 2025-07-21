@@ -62,12 +62,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
             <p><strong>Phone:</strong> $phone</p>
-            <p><strong>User Type:</strong> $user_type</p>
-            <p><strong>Help With:</strong> $help_with</p>
-            <p><strong>Looking For:</strong> $looking_for</p>
-            <p><strong>Meeting Time:</strong> $meeting_time</p>
-            <p><strong>Meeting Mode:</strong> $meeting_mode</p>
-            <p><strong>Additional Info:</strong> $additional_info</p>
+            <p><strong>User type:</strong> $user_type</p>
+            <p><strong>What do you need help with:</strong> $help_with</p>
+            <p><strong>Looking for:</strong> $looking_for</p>
+            <p><strong>Meeting time:</strong> $meeting_time</p>
+            <p><strong>Meeting mode:</strong> $meeting_mode</p>
+            <p><strong>Additional info:</strong> $additional_info</p>
         ";
 
         $mail->send();
