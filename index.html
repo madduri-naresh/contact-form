@@ -25,6 +25,12 @@
             padding: 0;
         }
 
+        input[type="text"]#datetime-picker {
+            background-color: #fff;
+            color: #000;
+            cursor: pointer;
+        }
+
         #toggleForm {
             position: fixed;
             top: 20px;
@@ -137,6 +143,14 @@
                 right: 10px;
                 left: 10px;
                 width: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #datetime-picker {
+                font-size: 16px;
+                /* avoid zoom-in on input tap */
+                padding: 10px;
             }
         }
     </style>
@@ -281,10 +295,10 @@
     </script>
 
     <script>
-        // Initialize Flatpickr
         flatpickr("#datetime-picker", {
             enableTime: true,
             dateFormat: "Y-m-d H:i",
+            disableMobile: true
         });
     </script>
 </body>
