@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <!-- Flatpickr JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     <style>
         body {
@@ -68,6 +71,33 @@
             font-weight: 600;
             color: #007bff;
 
+        }
+
+        #whatsappButton {
+            position: absolute;
+            bottom: -55px;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #25d366;
+            color: white;
+            padding: 10px 8.5px;
+            border-radius: 0px 0 0 5px;
+            border-bottom-left-radius: 10px;
+            font-size: 20px;
+            z-index: 1001;
+            text-align: center;
+        }
+
+        #whatsappButton i {
+            display: block;
+        }
+
+        .floatingsectionParent {
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        a:hover{
+            text-decoration: none;
         }
 
         #contactForm {
@@ -171,10 +201,19 @@
 
     <!-- Toggle Button -->
     <!-- Let's Connect Button -->
-    <div id="floatingButton" onclick="toggleForm()">
-        <span><i class="fa-regular fa-envelope"></i></span> <!-- Envelope Icon -->
-        <div class="text">Let's Connect</div>
+    <div class="floatingsectionParent">
+        <div id="floatingButton" onclick="toggleForm()">
+            <div class="text">Let's Connect</div>
+            <span><span class="material-symbols-outlined ">mail</span></span>
+            <a href="https://wa.me/918019654447" target="_blank" id="whatsappButton">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
     </div>
+
+
+
     <!-- Contact Form -->
     <div id="contactForm" class="shadow">
         <h4 class="mb-4 text-center">Contact Us</h4>
